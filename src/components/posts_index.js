@@ -43,7 +43,7 @@ class PostsIndex extends Component {
                     <thead>
                         <tr>
                             <th>Title</th>
-                            <th>Categories</th>
+                            <th>Text</th>
                             <th>Image</th>
                         </tr>
                     </thead>
