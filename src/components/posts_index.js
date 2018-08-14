@@ -18,11 +18,11 @@ class PostsIndex extends Component {
                     <tr>
                         <td className="">
                             <Link to={`/posts/${post.id}`}>
-                                {post.title}
+                                {post.post_title}
                             </Link>
                         </td>
-                        <td>{post.categories}</td>
-                        <td><img src={post.content} height="200" width="200" alt="this isn't really an image" title={post.content} /></td>
+                        <td>{post.post_text}</td>
+                        <td><img src={post.post_img} height="200" width="200" alt="this isn't really an image" title={post.content} /></td>
                     </tr>
                 </tbody>
             );
