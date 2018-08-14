@@ -36,6 +36,7 @@ class PostsIndex extends Component {
                     <Link className="btn btn-primary" to="/posts/new">
                         Add a Post
                     </Link>
+                    <Link to="/login" className="btn btn-danger">Log In Page</Link>
                 </div>
                 <h3>Posts</h3>
                 <table>
