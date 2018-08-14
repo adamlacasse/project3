@@ -22,7 +22,7 @@ class PostsIndex extends Component {
                             </Link>
                         </td>
                         <td>{post.categories}</td>
-                        <td><img src={post.content} /></td>
+                        <td><img src={post.content} height="200" width="200" alt="this isn't really an image" title={post.content} /></td>
                     </tr>
                 </tbody>
             );
@@ -43,7 +43,7 @@ class PostsIndex extends Component {
                         <tr>
                             <th>Title</th>
                             <th>Categories</th>
-                            <th>Content</th>
+                            <th>Image</th>
                         </tr>
                     </thead>
                     {this.renderPosts()}
