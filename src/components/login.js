@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class LoginForm extends React.Component {
 
@@ -12,10 +13,10 @@ class LoginForm extends React.Component {
     render() {
         return (
         <form onSubmit={this.handleSignIn.bind(this)}>
-            <h3>Sign in</h3>
+            <h3>Log in</h3>
             <input type="text" ref="username" placeholder="enter you username" /><br />
             <input type="password" ref="password" placeholder="enter password" /><br />
-            <input type="submit" value="Login" />
+            <Link to="/" className="btn btn-danger">Cancel</Link>
         </form>
         )
     }
