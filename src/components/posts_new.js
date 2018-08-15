@@ -46,8 +46,8 @@ class PostsNew extends Component {
                     component={this.renderField}
                 />
                 <Field
-                    label="Post Content"
-                    name="content"
+                    label="Image URL"
+                    name="post_img"
                     component={this.renderField}
                 />
                 <button type="submit" className="btn btn-primary">Submit</button>
@@ -60,14 +60,14 @@ class PostsNew extends Component {
 function validate(values) {
     const errors = {};
     // if errors is empty, the form is fine to submit; if errors has *any* properties redux assumes the form is invalid
-    if(!values.title) {
-        errors.title = "Enter a title, asshat!";
+    if(!values.post_title) {
+        errors.post_title = "Enter a title, asshat!";
     }
-    if(!values.categories) {
-        errors.categories = "Enter some categories, shitbird!";
+    if(!values.post_text) {
+        errors.post_text = "Enter some text, shitbird!";
     }
-    if(!values.content) {
-        errors.content = "Enter some content, fuckface!";
+    if(!values.post_img) {
+        errors.post_img = "Enter an image, fuckface!";
     }
     return errors;
 }
