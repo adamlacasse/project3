@@ -17,7 +17,7 @@ class PostsIndex extends Component {
                 <tbody key={post.id +1}> 
                     <tr>
                         <td className="">
-                            <Link to={`/posts/${post.id}`}>
+                            <Link to={`/post/${post.id}`}>
                                 {post.post_title}
                             </Link>
                         </td>
@@ -33,7 +33,7 @@ class PostsIndex extends Component {
         return (
             <div>
                 <div className="text-xs-right">
-                    <Link className="btn btn-primary" to="/posts/new">
+                    <Link className="btn btn-primary" to="/post/new">
                         Add a Post
                     </Link>
                     <Link to="/login" className="btn btn-danger">Log In Page</Link>
