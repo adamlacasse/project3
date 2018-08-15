@@ -14,7 +14,7 @@ class PostsIndex extends Component {
     renderPosts() {
         return _.map(this.props.posts, post => {
             return (
-                <tbody key={post.id}>
+                <tbody key={post.id +1}> 
                     <tr>
                         <td className="">
                             <Link to={`/posts/${post.id}`}>
