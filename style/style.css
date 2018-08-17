@@ -185,6 +185,7 @@ form-control {
   left: 0;
   word-wrap: break-word;
   line-height: .75;
+  /* opacity: 0.5; */
 }
 
 
