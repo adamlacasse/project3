@@ -34,25 +34,28 @@ class PostsNew extends Component {
         const {handleSubmit} = this.props;
 
         return (
-            <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-                <Field
-                    label="Title"
-                    name="post_title"
-                    component={this.renderField}
-                />
-                <Field
-                    label="Text"
-                    name="post_text"
-                    component={this.renderField}
-                />
-                <Field
-                    label="Image URL"
-                    name="post_img"
-                    component={this.renderField}
-                />
-                <button type="submit" className="btn btn-primary">Submit</button>
-                <Link to="/" className="btn btn-danger">Cancel</Link>
-            </form>
+            <div>
+                <div className="bg-everyday">Everyday</div>
+                <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+                    <Field
+                        label="Title"
+                        name="post_title"
+                        component={this.renderField}
+                    />
+                    <Field
+                        label="Text"
+                        name="post_text"
+                        component={this.renderField}
+                    />
+                    <Field
+                        label="Image URL"
+                        name="post_img"
+                        component={this.renderField}
+                    />
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <Link to="/" className="btn btn-danger">Cancel</Link>
+                </form>
+            </div>
         );
     }
 }

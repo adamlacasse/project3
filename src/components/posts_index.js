@@ -20,8 +20,8 @@ class PostsIndex extends Component {
                             {post.post_title}
                         </Link>
                     </div>
-                    <div className="item">{post.post_text}</div>
-                    <div className="item"><img src={post.post_img} alt="this isn't really an image" title={post.content} /></div>
+                    <div className="top">{post.post_text}</div>
+                    <div className=""><img src={post.post_img} alt="this isn't really an image" title={post.content} /></div>
                 </div>
             );
         });
@@ -30,14 +30,14 @@ class PostsIndex extends Component {
     render(){
         return (
             <div>
-                <div className="text-xs-right">
-                    <Link className="btn btn-primary" to="/post/new">
+                <div className="">
+                    <Link className="btn btn-success" to="/post/new">
                         Add a Post
                     </Link>
                     <Link to="/login" className="btn btn-danger">Log In Page</Link>
                 </div>
                 <h3>Posts</h3>
-                <div className="happy-grid">
+                <div className="top">
                     {this.renderPosts()}
                 </div>
             </div>
