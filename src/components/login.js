@@ -14,8 +14,8 @@ class LoginForm extends React.Component {
         return (
         <form onSubmit={this.handleSignIn.bind(this)}>
             <h3>Log in</h3>
-            <input type="text" ref="username" placeholder="enter you username" /><br />
-            <input type="password" ref="password" placeholder="enter password" /><br />
+            <input type="text" ref="username" placeholder="enter your username" /><br />
+            <input type="password" ref="password" placeholder="enter your password" /><br />
             <Link to="/" className="btn btn-danger">Cancel</Link>
         </form>
         )
