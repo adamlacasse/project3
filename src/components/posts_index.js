@@ -14,14 +14,14 @@ class PostsIndex extends Component {
     renderPosts() {
         return _.map(this.props.posts, post => {
             return (
-                <div key={post.id +1} className="item"> 
+                <div key={post.id +1} className="box"> 
                     <div className="item">
                         <Link to={`/post/${post.id}`}>
                             {post.post_title}
                         </Link>
                     </div>
-                    <div className="top">{post.post_text}</div>
-                    <div className=""><img src={post.post_img} alt="this isn't really an image" title={post.content} /></div>
+                    <div className="gallery">{post.post_text}</div>
+                    <div className="gallery"><img src={post.post_img} alt="this isn't really an image" title={post.content} /></div>
                 </div>
             );
         });

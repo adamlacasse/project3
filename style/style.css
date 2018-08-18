@@ -53,21 +53,6 @@ body {
 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 5px 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 100;
-  font-size: 10px;
-  color: var(--black);
-
-}
 /* Each item in our grid will contain numbers */
 .item {
   /* We center the contents of these items. You can also do this with flexbox too! */
@@ -185,7 +170,18 @@ form-control {
   left: 0;
   word-wrap: break-word;
   line-height: .75;
-  /* opacity: 0.5; */
+  opacity: 0.5;
 }
 
+.gallery {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%;
+
+}
