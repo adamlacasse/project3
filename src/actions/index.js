@@ -6,7 +6,7 @@ export const CREATE_POST = 'create_post';
 export const DELETE_POST = 'delete_post'
 
 
-const ROOT_URL = 'http://localhost:8081'
+const ROOT_URL = 'https://awl-everyday-api.herokuapp.com'
 // const API_KEY = '?key=goateesnowshoe'
 
 export function fetchPosts() {
