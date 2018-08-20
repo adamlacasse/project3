@@ -19,7 +19,10 @@ class PostsIndex extends Component {
                         </Link>
                     </div>
                     <div className="item">{post.post_text}</div>
-                    <div className="gallery"><img src={post.post_img} alt="this isn't really an image" title={post.content} /></div>
+                    <div className="gallery">
+                        <img src={post.post_img} alt="this isn't really an image" title={post.content} />
+                        <div className="image-date">{post.createdAt.substring(0, 10)}</div>
+                    </div>
                 </div>
             );
         });

@@ -178,13 +178,12 @@ form-control {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
+  position: relative;
 }
 
 .gallery img {
   max-width: 100%;
   max-height: 100%;
-
 }
 
 #login {
@@ -195,4 +194,12 @@ form-control {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.image-date {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: white;
+  font-size: 20px;
 }
