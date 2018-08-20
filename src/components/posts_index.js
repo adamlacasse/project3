@@ -32,13 +32,15 @@ class PostsIndex extends Component {
         return (
             <div>
                 <div className="bg-everyday">Today.</div>
-                <div className="">
-                    <Link className="btn btn-success" to="/post/new">Add a Post</Link>
-                    <Link to="/login" className="btn btn-danger">Log In Page</Link>
-                </div>
-                <div>&nbsp;</div>
-                <div className="top">
-                    {this.renderPosts()}
+                <div id="today">
+                    <div>
+                        <Link className="btn btn-success" to="/post/new">Add a Post</Link>
+                        <Link to="/login" className="btn btn-danger">Log In Page</Link>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div className="top">
+                        {this.renderPosts()}
+                    </div>
                 </div>
             </div>
         );

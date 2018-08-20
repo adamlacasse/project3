@@ -171,7 +171,6 @@ form-control {
   word-wrap: break-word;
   line-height: .75;
   /* opacity: 0.5; */
-  /* position: sticky; */
 }
 
 .gallery {
@@ -199,3 +198,10 @@ form-control {
   color: white;
   font-size: 20px;
 }
+
+/* 
+#today{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+} */
