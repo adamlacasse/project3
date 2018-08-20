@@ -186,13 +186,9 @@ form-control {
   max-height: 100%;
 }
 
-#login {
+.fixedForm {
   color: white;
-}
-
-.sticky {
   position: fixed;
-  top: 0;
   width: 100%;
 }
 

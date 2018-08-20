@@ -14,8 +14,8 @@ class LoginForm extends React.Component {
         return (
         <div>
             <div className="bg-everyday">Everyday.</div>
-            <form className="header" id="myHeader" onSubmit={this.handleSignIn.bind(this)}>
-                <h1 id="login">Log in</h1>
+            <form className="fixedForm" onSubmit={this.handleSignIn.bind(this)}>
+                <h1>Log in</h1>
                 <input type="text" ref="username" placeholder="enter your username" /><br />
                 <input type="password" ref="password" placeholder="enter your password" /><br />
                 <Link to="/" className="btn btn-danger">Submit</Link>
