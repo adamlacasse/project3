@@ -31,8 +31,8 @@ class PostsIndex extends Component {
     render(){
         return (
             <div>
-                <div className="bg-everyday">Today.</div>
-                <div id="today">
+                <div className="bg-everyday">Everyday.</div>
+                <div>
                     <div>
                         <Link className="btn btn-success" to="/post/new">Add a Post</Link>
                         <Link to="/login" className="btn btn-danger">Log In Page</Link>

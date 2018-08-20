@@ -32,10 +32,13 @@ class PostsShow extends Component {
                 >
                     Delete Post
                 </button>
-                <div className="box">
-                    <div className="item">{post.post_title}</div>
-                    <div className="item">{post.post_text}</div>
-                    <div className="gallery"><img src={post.post_img} /></div>
+                <div>&nbsp;</div>
+                <div className="">
+                    <div className="top">
+                        <div className="item">{post.post_title}</div>
+                        <div className="item">{post.post_text}</div>
+                        <div className="gallery"><img src={post.post_img} /></div>
+                    </div>
                 </div>
             </div>
         );
