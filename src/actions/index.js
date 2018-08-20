@@ -6,8 +6,8 @@ export const CREATE_POST = 'create_post';
 export const DELETE_POST = 'delete_post'
 
 
-const ROOT_URL = 'https://awl-everyday-api.herokuapp.com'
-// const API_KEY = '?key=goateesnowshoe'
+const ROOT_URL = /* 'https://everyday-rest.herokuapp.com/' */
+'https://awl-everyday-api.herokuapp.com'
 
 export function fetchPosts() {
     const request = axios.get(`${ROOT_URL}/posts`);

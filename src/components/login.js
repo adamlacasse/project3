@@ -13,9 +13,10 @@ class LoginForm extends React.Component {
     render() {
         return (
         <div>
-            <div className="bg-everyday">Everyday</div>
-            <form onSubmit={this.handleSignIn.bind(this)}>
-                <h1>Log in</h1>
+            <div className="bg-everyday">Everyday.</div>
+            {/* <div className="header" id="myHeader">TESTING</div> */}
+            <form className="header" id="myHeader" onSubmit={this.handleSignIn.bind(this)}>
+                <h1 id="login">Log in</h1>
                 <input type="text" ref="username" placeholder="enter your username" /><br />
                 <input type="password" ref="password" placeholder="enter your password" /><br />
                 <Link to="/" className="btn btn-danger">Submit</Link>

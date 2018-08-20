@@ -61,7 +61,7 @@ body {
   align-items: center;
   border: 5px solid rgba(0, 0, 0, 0.03);
   border-radius: 3px;
-  font-size: 35px;
+  font-size: 25px;
   background-color: var(--yellow); /* best colour */
 }
 
@@ -170,7 +170,8 @@ form-control {
   left: 0;
   word-wrap: break-word;
   line-height: .75;
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  /* position: sticky; */
 }
 
 .gallery {
@@ -184,4 +185,19 @@ form-control {
   max-width: 100%;
   max-height: 100%;
 
+}
+
+#login {
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  /* width: 100%; */
+}
+
+#myHeader {
+  font-size: 50px;
+  color: yellow;
 }

@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {fetchPosts} from '../actions';
 
-// const imageTest = '../../img/testing.jpg';
-
 class PostsIndex extends Component {
     componentDidMount() {
         this.props.fetchPosts();
@@ -20,7 +18,7 @@ class PostsIndex extends Component {
                             {post.post_title}
                         </Link>
                     </div>
-                    <div className="gallery">{post.post_text}</div>
+                    <div className="item">{post.post_text}</div>
                     <div className="gallery"><img src={post.post_img} alt="this isn't really an image" title={post.content} /></div>
                 </div>
             );
@@ -30,13 +28,12 @@ class PostsIndex extends Component {
     render(){
         return (
             <div>
+                <div className="bg-everyday">Today.</div>
                 <div className="">
-                    <Link className="btn btn-success" to="/post/new">
-                        Add a Post
-                    </Link>
+                    <Link className="btn btn-success" to="/post/new">Add a Post</Link>
                     <Link to="/login" className="btn btn-danger">Log In Page</Link>
                 </div>
-                <h3>Posts</h3>
+                <div>&nbsp;</div>
                 <div className="top">
                     {this.renderPosts()}
                 </div>
