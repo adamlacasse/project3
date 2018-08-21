@@ -13,13 +13,12 @@ class PostsIndex extends Component {
         return _.map(this.props.posts, post => {
             return (
                 <div key={post.id +1} className="box"> 
-
-                    <div className="gallery">
-      
-                        <img src={post.post_img} alt="this isn't really an image" title={post.content} />
-                        <div className="image-date"><p>{post.createdAt.substring(0, 10)}<br></br>{post.post_text}</p></div>
-
-                    </div>
+                    <Link to={`/post/${post.id}`}>
+                        <div className="gallery">  
+                            <img src={post.post_img} alt="this isn't really an image" title={post.content} />
+                            <div className="image-date"><p>{post.createdAt.substring(0, 10)}<br></br>{post.post_text}</p></div>
+                        </div>
+                    </Link>
                 </div>
             );
         });
