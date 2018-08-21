@@ -38,11 +38,6 @@ class PostsNew extends Component {
                 <div className="bg-everyday">Today.</div>
                 <form className="fixedForm" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field
-                        label="Title"
-                        name="post_title"
-                        component={this.renderField}
-                    />
-                    <Field
                         label="Text"
                         name="post_text"
                         component={this.renderField}
