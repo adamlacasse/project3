@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {fetchPosts} from '../actions';
 
-// const imageTest = '../../img/testing.jpg';
-
 class PostsIndex extends Component {
     componentDidMount() {
         this.props.fetchPosts();
@@ -14,17 +12,18 @@ class PostsIndex extends Component {
     renderPosts() {
         return _.map(this.props.posts, post => {
             return (
-                <tbody key={post.id +1}> 
-                    <tr>
-                        <td className="">
-                            <Link to={`/post/${post.id}`}>
-                                {post.post_title}
-                            </Link>
-                        </td>
-                        <td>{post.post_text}</td>
-                        <td><img src={post.post_img} height="200" width="200" alt="this isn't really an image" title={post.content} /></td>
-                    </tr>
-                </tbody>
+                <div key={post.id +1} className="box"> 
+                    <div className="item">
+                        <Link to={`/post/${post.id}`}>
+                            {post.post_title}
+                        </Link>
+                    </div>
+                    <div className="item">{post.post_text}</div>
+                    <div className="gallery">
+                        <img src={post.post_img} alt="this isn't really an image" title={post.content} />
+                        <div className="image-date">{post.createdAt.substring(0, 10)}</div>
+                    </div>
+                </div>
             );
         });
     }
@@ -32,23 +31,17 @@ class PostsIndex extends Component {
     render(){
         return (
             <div>
-                <div className="text-xs-right">
-                    <Link className="btn btn-primary" to="/post/new">
-                        Add a Post
-                    </Link>
-                    <Link to="/login" className="btn btn-danger">Log In Page</Link>
+                <div className="bg-everyday">Everyday.</div>
+                <div>
+                    <div>
+                        <Link className="btn btn-success" to="/post/new">Add a Post</Link>
+                        <Link to="/login" className="btn btn-danger">Log In Page</Link>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div className="top">
+                        {this.renderPosts()}
+                    </div>
                 </div>
-                <h3>Posts</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Text</th>
-                            <th>Image</th>
-                        </tr>
-                    </thead>
-                    {this.renderPosts()}
-                </table>
             </div>
         );
     }

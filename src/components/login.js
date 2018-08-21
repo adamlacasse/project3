@@ -12,12 +12,15 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-        <form onSubmit={this.handleSignIn.bind(this)}>
-            <h3>Log in</h3>
-            <input type="text" ref="username" placeholder="enter you username" /><br />
-            <input type="password" ref="password" placeholder="enter password" /><br />
-            <Link to="/" className="btn btn-danger">Cancel</Link>
-        </form>
+        <div>
+            <div className="bg-everyday">Everyday.</div>
+            <form className="fixedForm" onSubmit={this.handleSignIn.bind(this)}>
+                <h1>Log in</h1>
+                <input type="text" ref="username" placeholder="enter your username" /><br />
+                <input type="password" ref="password" placeholder="enter your password" /><br />
+                <Link to="/" className="btn btn-danger">Submit</Link>
+            </form>
+        </div>
         )
     }
   

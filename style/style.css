@@ -1,3 +1,200 @@
-form a {
-    margin-left: 5px;
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+:root {
+  --yellow: rgb(255, 255, 255);
+  --black: #272727;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: 'IBM Plex Mono', monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-weight: 100;
+  font-size: 10px;
+  color: var(--black);
+  /* color: white; */
+
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url("../img/08_14_18.jpg"),
+    linear-gradient(110deg, grey, white);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  /* background: white; */
+  background-attachment: fixed;
+  letter-spacing: -1px;
+  background-image: url("../img/08_14_18.jpg"),
+  no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 1;
+
+}
+
+/* Each item in our grid will contain numbers */
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  font-size: 25px;
+  background-color: var(--yellow); /* best colour */
+}
+
+.item p {
+  margin: 0 0 5px 0;
+}
+
+body {
+ 
+font-family: 'IBM Plex Mono', monospace;
+font-weight: 100;
+font-size: 10px;
+color: var(--black);
+}
+
+.top {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hero hero hero"
+}
+
+.hero {
+  grid-area: hero;
+  min-height: 400px;
+  background: white url(images/taco.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.hero > * {
+  background: var(--yellow);
+  padding: 5px;
+}
+
+
+@media (max-width: 700px) {
+  .top {
+    grid-template-areas:
+      "hero hero"
+  }
+  /* About */
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .top {
+    grid-template-areas:
+      "hero"
+  }
+}
+
+label {
+  font-size: 2rem;
+  color: #FFF;
+}
+
+form-control {
+  border-bottom: 1px solid #FFF;
+}
+
+.btn, .btn-large, .btn-small {
+  font-family: 'IBM Plex Mono', monospace;
+  text-decoration: none;
+  color: #fff;
+  background-color: red;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
+}
+.btn, .btn-large, .btn-small, .btn-floating, .btn-large, .btn-small, .btn-flat {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  outline: 0;
+}
+.btn, .btn-large, .btn-small, .btn-flat {
+  font-family: 'IBM Plex Mono', monospace;
+  border: none;
+  border-radius: 0px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bg-everyday {
+  font-weight: 100;
+  font-size: 600px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  word-wrap: break-word;
+  line-height: .75;
+  /* opacity: 0.5; */
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  position: relative;
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fixedForm {
+  color: white;
+  position: fixed;
+  width: 100%;
+}
+
+.image-date {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: white;
+  font-size: 20px;
 }
