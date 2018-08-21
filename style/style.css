@@ -1,4 +1,5 @@
-/*
+
+                        /*
   Oh Hello!
 
   These are some base styles so that our tutorial looks good.
@@ -35,8 +36,9 @@ html {
 }
 
 body {
+  
   background-image: url("../img/08_14_18.jpg"),
-    linear-gradient(110deg, grey, white);
+    linear-gradient(110deg, RED, white);
   background-size: 340px, auto;
   min-height: calc(100vh - 100px);
   margin: 50px;
@@ -53,35 +55,61 @@ body {
 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--black);
+
+}
 /* Each item in our grid will contain numbers */
 .item {
   /* We center the contents of these items. You can also do this with flexbox too! */
   display: grid;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid rgba(0, 0, 0, 0.03);
-  border-radius: 3px;
-  font-size: 25px;
-  background-color: var(--yellow); /* best colour */
+  justify-content: left;
+  align-items: left;
+  /* border: 5px solid rgba(0, 0, 0, 0.03); */
+  font-size: 18px;
+  color: #fff;
+  font-weight: 100;
+
+
 }
 
 .item p {
   margin: 0 0 5px 0;
+  color: #fff;
+  font-weight: 700;
+
+
 }
 
+.item a {
+  color: #fff;
+
+}
 body {
  
 font-family: 'IBM Plex Mono', monospace;
-font-weight: 100;
+font-weight: 50;
 font-size: 10px;
-color: var(--black);
 }
 
 .top {
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
-    "hero hero hero"
+    "hero hero hero";
+  grid-auto-rows: auto;
+
 }
 
 .hero {
@@ -98,7 +126,7 @@ color: var(--black);
 }
 
 .hero > * {
-  background: var(--yellow);
+  background: RED;
   padding: 5px;
 }
 
@@ -130,6 +158,10 @@ form-control {
   border-bottom: 1px solid #FFF;
 }
 
+w3-theme {
+  color: red;
+}
+
 .btn, .btn-large, .btn-small {
   font-family: 'IBM Plex Mono', monospace;
   text-decoration: none;
@@ -140,10 +172,14 @@ form-control {
   -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
   cursor: pointer;
+  padding-right: 10px;
+
 }
 .btn, .btn-large, .btn-small, .btn-floating, .btn-large, .btn-small, .btn-flat {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
+  background-color: red;
+
   outline: 0;
 }
 .btn, .btn-large, .btn-small, .btn-flat {
@@ -157,6 +193,8 @@ form-control {
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
+  background-color: black;
+
 }
 
 .bg-everyday {
@@ -170,31 +208,55 @@ form-control {
   left: 0;
   word-wrap: break-word;
   line-height: .75;
+  color: black;
   /* opacity: 0.5; */
 }
+/* ////////////////////////////////////////// */
 
 .gallery {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   position: relative;
+
 }
 
 .gallery img {
   max-width: 100%;
   max-height: 100%;
+
 }
 
-.fixedForm {
-  color: white;
-  position: fixed;
-  width: 100%;
-}
-
-.image-date {
+ .image-date {
   position: absolute;
-  top: 8px;
   left: 16px;
   color: white;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 100;
+  z-index: 2;
+ }
+
+ .href {
+  font-weight: 500;
+
+ }
+ /* unvisited link */
+
+
+/* visited link */
+.btn:visited {
+  background-color: red;
+}
+
+/* mouse over link */
+.btn:hover {
+  color: black;
+  background-color: white;
+
+}
+
+/* selected link */
+.btn:active {
+  color: red;
+  background-color: white;
 }
